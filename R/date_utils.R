@@ -43,6 +43,9 @@ get_gran = function(tsdf, index=1) {
   else if (gran >= 3600) {
     return("hr")
   }
+  else if (gran >= 900) {
+    return("15min")
+  }
   else if (gran >= 60) {
     return("min")
   }
