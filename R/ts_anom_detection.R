@@ -169,6 +169,7 @@ AnomalyDetectionTs <- function(x, max_anoms = 0.10, direction = 'pos',
   period = switch(gran,
                   min = 1440,
                   hr = 24,
+                  15min = 24 * 4,
                   # if the data is daily, then we need to bump the period to weekly to get multiple examples
                   day = 7)
   num_obs <- length(x[[2]])
